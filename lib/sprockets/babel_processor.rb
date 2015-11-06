@@ -50,7 +50,7 @@ module Sprockets
       end
 
       map = SourceMapUtils.decode_json_source_map(JSON.generate(result['map']))
-      map = SourceMapUtils.combine_source_maps(input[:metadata][:map], map["mappings"])
+      map = SourceMapUtils.combine_source_maps(input[:metadata][:map], map['mappings'])
 
       { data: result['code'], map: map }
     end

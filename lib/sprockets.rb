@@ -141,7 +141,7 @@ module Sprockets
   require 'sprockets/babel_processor'
   register_mime_type 'application/ecmascript-6', extensions: ['.es6'], charset: :unicode
   register_transformer 'application/ecmascript-6', 'application/javascript', BabelProcessor
-  register_preprocessor 'application/ecmascript-6', DirectiveProcessor.new(comments: ["//", ["/*", "*/"]])
+  # register_preprocessor 'application/ecmascript-6', DirectiveProcessor.new(comments: ["//", ["/*", "*/"]])
 
   # Mmm, CoffeeScript
   require 'sprockets/coffee_script_processor'
